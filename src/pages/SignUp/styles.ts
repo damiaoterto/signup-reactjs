@@ -68,7 +68,7 @@ export const FormSection = styled.div`
     label {
       display: flex;
       flex-direction: column;
-      color: #575757;
+      color: #828282;
       font-weight: bold;
 
       & + label {
@@ -77,10 +77,12 @@ export const FormSection = styled.div`
 
       div {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        background: #ffff;
         border: 2px solid #b5b3b3;
         border-radius: 6px;
         padding: 15px;
+        margin-top: 6px;
 
         input {
           flex: 1;
@@ -111,6 +113,30 @@ export const FormSection = styled.div`
 
       &:hover {
         background: #f5b90f;
+      }
+    }
+
+    a {
+      display: flex;
+      justify-content: center;
+
+      color: #ffff;
+      background: #5ca5ff;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      margin-top: 35px;
+      width: 100%;
+      padding: 15px;
+      transition: background 0.2s ease-in;
+
+      svg {
+        margin-right: 15px;
+      }
+
+      &:hover {
+        background: #2681f0;
       }
     }
   }

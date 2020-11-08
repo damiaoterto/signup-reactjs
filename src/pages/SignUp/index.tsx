@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FiAtSign, FiLock } from 'react-icons/fi';
+import { FaGoogle } from 'react-icons/fa';
 import { Container } from '../../styles';
 import LogoProject from '../../assets/logo-project.svg';
 
@@ -14,7 +16,7 @@ const SignUp: React.FC = () => (
     <FormSection>
       <span>
         <select>
-          <option value="pt-br">Português Brasil</option>
+          <option value="pt-br">English (USA)</option>
         </select>
       </span>
 
@@ -29,6 +31,7 @@ const SignUp: React.FC = () => (
           e-mail
           <div>
             <input id="email" type="email" placeholder="you@exempla.com" />
+            <FiAtSign size={25} color="#575757" />
           </div>
         </label>
 
@@ -36,10 +39,15 @@ const SignUp: React.FC = () => (
           password
           <div>
             <input id="password" type="password" placeholder="+ 6 Characteres" />
+            <FiLock size={25} color="#575757" />
           </div>
         </label>
 
         <button type="submit">Create an account</button>
+        <Link to="/">
+          <FaGoogle size={25} color="#ffff" />
+          Sign Up with Google
+        </Link>
       </form>
     </FormSection>
   </Container>
